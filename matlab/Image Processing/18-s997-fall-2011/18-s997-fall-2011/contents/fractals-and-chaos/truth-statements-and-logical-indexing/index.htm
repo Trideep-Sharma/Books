@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>Truth Statements and Logical Indexing | Fractals and Chaos | Introduction To MATLAB Programming | Mathematics | MIT OpenCourseWare</title>
+<!-- Begin Automatic Metadata Insertion --><meta content="18-s997-introduction-to-matlab-programming-fall-2011" name="WT.cg_n">
+<meta content="Truth Statements and Logical Indexing" name="WT.cg_s">
+<meta content="This page includes lectures notes, three exercises, and a homework assignment to introduce logical indexing for constructing a plot of the Mandlebrot fractal." name="Description">
+<meta content="Farjoun, Yossi" name="Author">
+<meta content="MATLAB,programming,variables,plotting,scripts,functions,flow control,statistics,data structures,images,vectors,matrices,root-finding,Newton's Method,Secant Method,Basins of Attraction,Conway Game of Life,Game of Life,vectorization,debugging,scope,function block,Applied Mathematics,Programming Languages,Computational Modeling and Simulation" name="keywords">
+<meta content="18.S997 Introduction To MATLAB Programming | Truth Statements and Logical Indexing" name="Search_Display">
+<meta content="Applied Mathematics" itemprop="about">
+<meta content="Programming Languages" itemprop="about">
+<meta content="Computational Modeling and Simulation" itemprop="about">
+<!-- End Automatic Metadata Insertion --><link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses_new.css">
+<link href="http://ocw.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+<link rel="canonical" href="http://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/fractals-and-chaos/truth-statements-and-logical-indexing">
+<link rel="apple-touch-icon" href="../../../common/images/apple-touch-icon.png">
+<script type="text/javascript" src="../../../common/scripts/jquery.js"></script><script type="text/javascript" src="../../../common/scripts/ocw-media-utils-offline.js"></script><script type="text/javascript" src="../../../common/scripts/ocw-offline.js"></script><script type="text/javascript" src="../../../common/scripts/jquery.bubblepopup.min.js"></script><script type="text/javascript" src="../../../common/scripts/bubble-popup-offline.js"></script><script type="text/javascript" src="http://ocw.mit.edu//cdn.mathjax.org/mathjax/latest/MathJax.js?config=Accessible-full"></script><script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+		});
+	</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <div id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index-->
+<div class="grid_6 alpha" role="banner" id="banner"><a href="http://ocw.mit.edu/"><img class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology" src="../../../common/images/ocw_mast.png"></a></div>
+<div class="grid_6 omega" role="form toolbar" id="subscribe">
+<div class="module">
+<table class="social"><tbody><tr>
+<td class="socialbutton"><a href="http://ocw.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>
+            <td>
+<a href="https://plus.google.com/104567381989352550847/posts"><img alt="Click to visit our Google+ page." src="../../../common/images/icon_gp.png"></a><a href="https://www.pinterest.com/mitocw/pins/"><img alt="Click to visit our Pinterest page." src="../../../common/images/icon_pin.png"></a><a href="http://facebook.com/mitocw"><img alt="Click to visit our Facebook page." src="../../../common/images/icon_fb.png"></a><a href="http://twitter.com/mitocw"><img alt="Click to visit our Twitter feed." src="../../../common/images/icon_tw.png"></a>
+</td>
+        </tr></tbody></table>
+</div>
+<p class="helplinks"><a href="http://ocw.mit.edu/help">Help</a>   |   <a href="../../../common/jsp/feedback.htm">Contact Us</a></p>
+</div>
+<div class="clear"> </div>
+<!--googleon: index-->
+</div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<div id="mega" role="navigation" class="grid_8 alpha">        
+	<ul id="menu">
+<li id="menu_home">
+            <a href="http://ocw.mit.edu/"><img src="../../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+        </li>
+<!-- End Home Item -->        
+        <li class="selected">
+            <a href="#" class="drop">Find Courses</a><!-- Begin 5 columns Item -->
+            <div class="dropdown_5columns-a mega-courses">                    
+                <div class="col_1a">
+                    <div class="row_1a">
+                        <div class="quart">
+                            <h2 class="nav">Find courses by:</h2>
+                            <ul class="nav-bullet find_by">
+<li><a href="http://ocw.mit.edu/courses/find-by-topic/">Topic</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/find-by-number/">MIT Course Number</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/find-by-department/">Department</a></li>
+                            </ul>
+<ul style="margin-top: 88px;" class="nav-bullet find_by">
+<li style="font-weight: normal; font-size: 1em;"><a href="http://ocw.mit.edu/courses/">View All Courses</a></li>
+							</ul>
+</div>
+                        <div class="quart">
+                            <h2 class="nav">Collections</h2>
+                            <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/this-course-at-mit/">This Course at MIT</a></li>
+                                <li><a href="http://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+                            </ul>
+</div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="row_1b">
+                        <h2 class="nav">Cross-Disciplinary Topic Lists</h2>
+                        <div class="quart">
+                        <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/energy-courses">Energy</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/environment-courses">Environment</a></li>
+                        </ul>
+</div>    
+                        <div class="quart">
+                        <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/intro-programming">Introductory Programming</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/life-sciences">Life Sciences</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/transportation-courses">Transportation</a></li>
+                        </ul>
+</div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+                <div class="col_1b">
+                    <h2 class="nav">Translated Courses</h2>
+                    <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/translated-courses/traditional-chinese">繁體字 / Traditional Chinese</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/spanish">Español / Spanish</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/portuguese">Português / Portuguese</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/persian">فارسی / Persian</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/turkish">Türkçe / Turkish</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/korean">(비디오)한국 / Korean</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses">More...</a></li>
+                    </ul>
+</div>
+            </div>
+        </li>
+        <li>
+            <a href="" class="drop">About</a>
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/about/">About MIT OpenCourseWare</a></li>
+                    </ul>
+<ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/about/site-statistics/">Site Stats</a></li>
+                        <li><a href="http://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>                        
+                    </ul>
+<ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/about/media-coverage/">Media Coverage</a></li>
+                        <li><a href="http://ocw.mit.edu/about/newsletter/">Newsletter</a></li>                        
+                    </ul>
+</div>
+            </div>  
+        </li>    
+        <li>
+            <a href="" class="drop">Donate</a>        
+            <div class="dropdown_1column-a">
+                    <div class="col_1">
+                        <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/donate/">Make a Donation</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/why-donate/">Why Donate?</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/our-supporters/">Our Supporters</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/shop-ocw">Shop OCW</a></li>
+                        </ul>
+<ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+                        </ul>
+</div>
+            </div>            
+        </li>        
+        <li>
+            <a href="" class="drop">Featured Sites</a>        
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/high-school/">Highlights for High School</a></li>
+                        <li><a href="http://ocw.mit.edu/educator/">OCW Educator</a></li>
+                    </ul>
+<ul class="nav-bullet mega-div-top">
+<li><a href="http://ocw.mit.edu/ans7870/featured/mitx-courses-on-edx.htm">MITx Courses on edX</a></li>
+                        <li><a href="http://teachingexcellence.mit.edu/">Teaching Excellence at MIT</a></li>
+						<li><a href="http://www.oeconsortium.org/">Open Education Consortium</a></li>
+                    </ul>
+</div>
+            </div>            
+        </li>
+    </ul>
+</div>
+<div id="search" role="search" class="grid_4 omega">
+    
+    <form method="get" action="../../../common/search/AdvancedSearch.htm">
+     	 <table class="search"><tbody><tr>
+<td class="black"><input type="text" onblur="fillSearchBox()" onfocus="clearSearchBox()" maxlength="255" value="Search" name="q" class="greytext searchField" id="terms"></td> 			 
+                    <td class="black"><input type="image" src="../../../common/images/button_search.png" name="btnG" class="sub_button"></td>			 
+                    <td class="text2"><a href="../../../common/search/AdvancedSearch.htm">Advanced<br>Search</a></td>
+                </tr></tbody></table>
+</form>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->  
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</div>
+<!-- top end -->
+			
+		<div id="center">
+         <div id="grid">
+		     <div id="left-section">
+                 <div id="breadcrumb">
+                      <p>
+
+    <a href="http://ocw.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="http://ocw.mit.edu/courses">Courses</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="http://ocw.mit.edu/courses/mathematics">Mathematics</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/index.htm">Introduction To MATLAB Programming</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/fractals-and-chaos/index.htm">Fractals and Chaos</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Truth Statements and Logical Indexing
+         
+    
+</p>
+
+                 </div>
+                 <div class="clear"></div>
+                 <div id="section_title">
+           			<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Truth Statements and Logical Indexing
+        </span>
+    </h1>
+           	     </div>
+           	     <div class="clear"></div>
+           	     <div id="course_wrapper_section">
+           	     	 <div id="course_nav">
+           			 	
+
+
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script><!--Left Nav Starts --><ul>
+<li class="">
+			   			<a href="../../../contents/index.htm">
+		                  Course Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/Syllabus/index.htm">
+		                  Syllabus  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="the-basics" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuthe-basics'); toggleClass('the-basics'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/the-basics/index.htm" class="">
+		                  The Basics  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuthe-basics" class="">
+<li class="">
+				 		<a href="../../../contents/the-basics/what-is-programming/index.htm" class="">What is Programming?</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/command-prompt-and-expressions/index.htm" class="">Command Prompt and Expressions</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/lists-vectors-and-matrices/index.htm" class="">Lists, Vectors, and Matrices</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/variables/index.htm" class="">Variables</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="root-finding" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuroot-finding'); toggleClass('root-finding'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/root-finding/index.htm" class="">
+		                  Root-Finding  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuroot-finding" class="">
+<li class="">
+				 		<a href="../../../contents/root-finding/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/root-finding/newtons-method/index.htm" class="">Newton's Method</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/root-finding/the-secant-method/index.htm" class="">The Secant Method</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/root-finding/more-sub-indexing/index.htm" class="">More Sub-Indexing</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="basic-plotting" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menubasic-plotting'); toggleClass('basic-plotting'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/basic-plotting/index.htm" class="">
+		                  Basic Plotting  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menubasic-plotting" class="">
+<li class="">
+				 		<a href="../../../contents/basic-plotting/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/basic-plotting/basins-of-attraction/index.htm" class="">Basins of Attraction</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="vectorization" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuvectorization'); toggleClass('vectorization'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/vectorization/index.htm" class="">
+		                  Vectorization  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuvectorization" class="">
+<li class="">
+				 		<a href="../../../contents/vectorization/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/complex-numbers/index.htm" class="">Complex Numbers</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/user-defined-functions/index.htm" class="">User-Defined Functions</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/scope/index.htm" class="">Scope</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/debugging-with-matlab/index.htm">
+		                  Debugging with MATLAB  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="fractals-and-chaos" class="mC">
+						<a href="#" class="" onclick="toggleMenu('menufractals-and-chaos'); toggleClass('fractals-and-chaos'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Collapse Menu" title="Collapse Menu"></a>
+		                <a href="../../../contents/fractals-and-chaos/index.htm" class="">
+		                  Fractals and Chaos  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menufractals-and-chaos" class="selected">
+<li class="">
+				 		<a href="../../../contents/fractals-and-chaos/logistic-equation/index.htm" class="">Logistic Equation</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/fractals-and-chaos/more-on-loops/index.htm" class="">More on Loops</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/fractals-and-chaos/terminating-a-loop-prematurely-break-and-continue/index.htm" class="">Terminating a Loop Prematurely: Break and Continue</a>
+		            </li>
+		            <li class="selected">
+				 		<a href="../../../contents/fractals-and-chaos/truth-statements-and-logical-indexing/index.htm" class="selected">Truth Statements and Logical Indexing</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="conway-game-of-life" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuconway-game-of-life'); toggleClass('conway-game-of-life'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/conway-game-of-life/index.htm" class="">
+		                  Conway Game of Life  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuconway-game-of-life" class="">
+<li class="">
+				 		<a href="../../../contents/conway-game-of-life/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/conway-game-of-life/conway-game-of-life-implementation/index.htm" class="">Conway Game of Life Implementation</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="library" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menulibrary'); toggleClass('library'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/library/index.htm" class="">
+		                  Library  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menulibrary" class="">
+<li class="">
+				 		<a href="../../../contents/library/projects/index.htm" class="">More Projects</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/library/videos/index.htm" class="">Videos</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+<!--Left Nav Ends -->
+</div>
+           		     <div id="course_inner_section">
+           		     	 
+	       		     	<p><style type="text/css">
+h1 + div.clear + div.mod8 table.tableNo{width:100%; border:0;}
+.tableNo td.no{width:6%; vertical-align:top; font-size: 1em;}
+.tableNo td.data{width:94%; vertical-align:top; font-size: 1em;}
+</style></p>
+<p>The Mandelbrot Set is the set of points \(z\in\mathbb{C}\) for which the sequence</p>
+<p>\begin{equation}   z_0=0,\quad z_{n+1}=(z_n)^2+z \label{eq:mandelbrot} \end{equation}</p>
+<p>remains bounded as \(n\rightarrow\infty\). Color can be added for the unbounded elements by specifying how "fast" they diverge, for example, how many iterations it takes to reach some large absolute value. (Since once \(|x_n|\) is large enough the sequence will be growing indefinitely.)</p>
+<p>To decide on the color of a particular point on the screen \((x,y)\), we define a complex number \(z=x+i y\) and iterate according to the equation mentioned above.</p>
+<p><strong>Exercise 17.</strong> <em>With three nested</em> <code class="matlab">for</code> <em>loops, iterate over</em> <code class="matlab">x=-1.5:.01:0.5</code> <em>and</em> <code class="matlab">y=-1:0.01:1</code>.  <em>For each point, iterate, say, 100 times and</em> <code class="matlab">break</code> <em>if</em> <code class="matlab">abs(z_n)</code> <em>is ever too large, say larger than 10. There's no need to keep the sequence of</em> \(z\)'<em>s, but be sure not to overwrite the</em> \(z\) <em>variable that comes from</em> \(x+iy\). <em>If the the sequence grew to be large, leave white, otherwise place a black dot at (the original) </em> \((x,y)\).</p>
+<p>The result should look like this:</p>
+<p align="center"><img width="400" height="259" src="../../../contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img2.jpg" alt="Graph of 100 iterations of the Mandelbrot fractal in gray."></p>
+<p align="center" class="instruction">Graphing the Mandelbrot set.</p>
+<p>Notice that it takes quite a long time to run, especially if you modify the code to give you a plot with better resolution. To fix this we want to use matrix-at-once calculation. We can create matrices X and Y using <code class="matlab">meshgrid</code>:</p>
+<pre><code>x=-1.5:.1:1;
+y=-1.5:.1:1.5;
+[X,Y]=<span style="color: rgb(0, 0, 255);">meshgrid</span>(x,y);</code><span style="color: rgb(51, 153, 102);"><code> % make sure you understand what this function does!</code></span></pre>
+<p>Each element in these matrices holds the appropriate x- or y-value for that position in the matrix. We can now calculate the iterations very simply:</p>
+<pre><code>Z=X+1i*Y;   <span style="color: rgb(51, 153, 102);">% use 1i since you can overwrite i but 1i will always be sqrt(-1)</span>
+Zn=0*Z;     <span style="color: rgb(51, 153, 102);">% Start with zeros everywhere</span>
+Zn=Zn.^2+Z; </code><span style="color: rgb(51, 153, 102);"><code>% One step of the iteration, notice the point-wise power operator.</code></span></pre>
+<p>Now that we know how to iterate we need to figure out how to color the different points. Here's where the name of this subsection comes in.</p>
+<p>Just as we can perform point-wise arithmetic with a matrix \(A\), we can also perform point-wise <em>comparative</em> and <em>logical</em> operations. The comparative operators are: <code class="matlab">&gt;</code> (greater than), <code class="matlab">&lt;</code> (less than) <code class="matlab">==</code> (equal to**), <code class="matlab">~=</code> (not equal to), <code class="matlab">&gt;=</code> (greater than or equal to) <code class="matlab">&lt;=</code> (less than or equal to), while the logical operators are: <code class="matlab">~</code> (not), <code class="matlab">&amp;</code> (and), <code class="matlab">|</code> (or). For more help on operators type <code class="matlab">help ops</code>.</p>
+<p>Letting <code class="matlab">A=magic(4)</code>, understand the following constructions:</p>
+<ul>
+<li><code class="matlab">A&gt;5</code></li>
+    <li><code class="matlab">A&lt;=3 | A&gt;=10</code></li>
+    <li><code class="matlab">A==10 | A==5</code></li>
+    <li><code class="matlab">A&gt;5 &amp; A&lt;10</code></li>
+    <li><code class="matlab">~(A&gt;5 &amp; A&lt;10)</code></li>
+</ul>
+<p>Given that <code class="matlab">x = [1 5 2 8 9 0 1]</code> and <code class="matlab">y = [5 2 2 6 0 0 2]</code>, execute and explain the results of the following commands:</p>
+<ol type="a">
+<li><code class="matlab">x &gt; y </code></li>
+    <li><code class="matlab">y &lt; x</code></li>
+    <li><code class="matlab">x == y</code></li>
+    <li><code class="matlab">x &lt;= y</code></li>
+    <li><code class="matlab">y &gt;= x</code></li>
+    <li><code class="matlab">x | y</code></li>
+    <li><code class="matlab">x &amp; y</code></li>
+    <li><code class="matlab">x &amp; (~y)</code></li>
+    <li><code class="matlab">(x &gt; y) | (y &lt; x)</code></li>
+    <li><code class="matlab">(x &gt; y) &amp; (y &lt; x)</code></li>
+</ol>
+<p>Together with the functions <code class="matlab">any</code> and <code class="matlab">all</code> we can ask questions like "Is any/all element of A equal to 4?", the functions look down the first "non-singleton" dimension by default, which means that they work as you expect for column and row vectors, but for matrices they only "reduce" the first dimension:</p>
+<pre><code>&gt;&gt; <span style="color: rgb(0, 0, 255);">any</span>(<span style="color: rgb(0, 0, 255);">magic</span>(4)==4)      <span style="color: rgb(51, 153, 102);">% by default reduces the first dimension (rows):</span>
+<span style="color: rgb(0, 0, 255);">ans</span> =
+     1     0     0     0
+&gt;&gt; <span style="color: rgb(0, 0, 255);">any</span>(<span style="color: rgb(0, 0, 255);">magic</span>(4)==4,2)    <span style="color: rgb(51, 153, 102);">% we can tell it to reduce a different one:</span>
+<span style="color: rgb(0, 0, 255);">ans</span> =
+     0
+     0
+     0
+     1
+&gt;&gt; <span style="color: rgb(0, 0, 255);">any</span>(<span style="color: rgb(0, 0, 255);">any</span>(<span style="color: rgb(0, 0, 255);">magic</span>(4)==4)) <span style="color: rgb(51, 153, 102);">% To reduce a matrix to a single number, we must apply
+                         % the functions twice:</span>
+<span style="color: rgb(0, 0, 255);">ans</span> =
+     1</code></pre>
+<p>In addition we can use a truth matrix to <em>access</em> elements of a matrix. If we have a matrix A and a truth matrix (a matrix found by comparative and logical operations) B <em>of the same size as A</em>, we may write <code class="matlab">A(B)</code> and the result will be the list (not matrix!) of elements of A for which the corresponding elements of B are "true." This is slightly confusing, so an example is useful:</p>
+<pre><code>&gt;&gt; A=<span style="color: rgb(0, 0, 255);">magic</span>(4);
+&gt;&gt; B=A&gt;10;
+&gt;&gt; A(B)
+<span style="color: rgb(0, 0, 255);">ans</span> =
+     16
+     11
+     14
+     15
+     13
+     12</code></pre>
+<p><strong>Exercise 18.</strong> <em>Explain the order of the numbers in the previous example.</em></p>
+<p>In addition to getting the list of elements that correspond to some truth matrix, we can also use the truth matrix to change specific elements of a matrix:</p>
+<pre><code>&gt;&gt; A
+A =
+     16     2     3    13
+      5    11    10     8
+      9     7     6    12
+      4    14    15     1
+&gt;&gt; A&gt;5
+<span style="color: rgb(0, 0, 255);">ans</span> =
+     1     0     0     1
+     0     1     1     1
+     1     1     1     1
+     0     1     1     0
+&gt;&gt; A(A&gt;5)=0
+A =
+     0     2     3     0
+     5     0     0     0
+     0     0     0     0
+     4     0     0     1</code></pre>
+<p><strong>Exercise 19.</strong> <em>The exercises here show the techniques of logical indexing. Given</em> <code class="matlab">x = 1:10</code> and <code class="matlab">y = [3 1 5 6 8 2 9 4 7 0]</code>, <em>execute and interpret the results of the following commands:</em></p>
+<table cellspacing="0" cellpadding="0" border="0" class="tableNo"><tbody>
+<tr>
+<td class="no"><em>1(a)</em></td>
+            <td class="data"><code class="matlab"> (x &gt; 3) &amp; (x &lt; 8)</code></td>
+        </tr>
+<tr>
+<td class="no"><em>1(b)</em></td>
+            <td class="data"><code class="matlab"> x(x &gt; 5)</code></td>
+        </tr>
+<tr>
+<td class="no"><em>1(c)</em></td>
+            <td class="data"><code class="matlab"> y(x &lt;= 4)</code></td>
+        </tr>
+<tr>
+<td class="no"><em>1(d)</em></td>
+            <td class="data"><code class="matlab"> x( (x &lt; 2) | (x &gt;= 8) )</code></td>
+        </tr>
+<tr>
+<td class="no"><em>1(e)</em></td>
+            <td class="data"><code class="matlab"> y( (x &lt; 2) | (x &gt;= 8) )</code></td>
+        </tr>
+<tr>
+<td class="no"><em>1(f)</em></td>
+            <td class="data"><code class="matlab"> x(y &lt; 0)</code></td>
+        </tr>
+</tbody></table>
+<p> </p>
+<p><em>Given</em> <code class="matlab">x = [3 15 9 12 -1 0 -12 9 6 1]</code>, <em>provide the command(s) that will</em></p>
+<table cellspacing="0" cellpadding="0" border="0" class="tableNo"><tbody>
+<tr>
+<td class="no"><em>2(a)</em></td>
+            <td class="data"><em>... set the positive elements of x to zero.</em></td>
+        </tr>
+<tr>
+<td class="no"><em>2(b)</em></td>
+            <td class="data"><em>... set values of x that are multiples of 3 to 3 (<code class="matlab">rem</code> will help here).</em></td>
+        </tr>
+<tr>
+<td class="no"><em>2(c)</em></td>
+            <td class="data"><em>... multiply the even elements of x by 5.</em></td>
+        </tr>
+<tr>
+<td class="no"><em>2(d)</em></td>
+            <td class="data"><em>... extract the values of x that are greater than 10 into a vector called y.</em></td>
+        </tr>
+<tr>
+<td class="no"><em>2(e)</em></td>
+            <td class="data"><em>... set the values in x that are less than the mean value of x to zero.</em></td>
+        </tr>
+<tr>
+<td class="no"><em>2(f)</em></td>
+            <td class="data"><em>... set the values in x that are above the mean to their di</em></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

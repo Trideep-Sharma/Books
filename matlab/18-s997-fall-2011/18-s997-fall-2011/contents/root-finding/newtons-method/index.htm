@@ -1,0 +1,748 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>Newton's Method | Root-Finding | Introduction To MATLAB Programming | Mathematics | MIT OpenCourseWare</title>
+<!-- Begin Automatic Metadata Insertion --><meta content="18-s997-introduction-to-matlab-programming-fall-2011" name="WT.cg_n">
+<meta content="Newton's Method" name="WT.cg_s">
+<meta content="This page includes lecture notes and three exercises that introduce the implementation of Newton's Method." name="Description">
+<meta content="Farjoun, Yossi" name="Author">
+<meta content="MATLAB,programming,variables,plotting,scripts,functions,flow control,statistics,data structures,images,vectors,matrices,root-finding,Newton's Method,Secant Method,Basins of Attraction,Conway Game of Life,Game of Life,vectorization,debugging,scope,function block,Applied Mathematics,Programming Languages,Computational Modeling and Simulation" name="keywords">
+<meta content="18.S997 Introduction To MATLAB Programming | Newton's Method" name="Search_Display">
+<meta content="Applied Mathematics" itemprop="about">
+<meta content="Programming Languages" itemprop="about">
+<meta content="Computational Modeling and Simulation" itemprop="about">
+<!-- End Automatic Metadata Insertion --><link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses_new.css">
+<link href="http://ocw.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+<link rel="canonical" href="http://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/root-finding/newtons-method">
+<link rel="apple-touch-icon" href="../../../common/images/apple-touch-icon.png">
+<script type="text/javascript" src="../../../common/scripts/jquery.js"></script><script type="text/javascript" src="../../../common/scripts/ocw-media-utils-offline.js"></script><script type="text/javascript" src="../../../common/scripts/ocw-offline.js"></script><script type="text/javascript" src="../../../common/scripts/jquery.bubblepopup.min.js"></script><script type="text/javascript" src="../../../common/scripts/bubble-popup-offline.js"></script><script type="text/javascript" src="http://ocw.mit.edu//cdn.mathjax.org/mathjax/latest/MathJax.js?config=Accessible-full"></script><script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+		});
+	</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <div id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index-->
+<div class="grid_6 alpha" role="banner" id="banner"><a href="http://ocw.mit.edu/"><img class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology" src="../../../common/images/ocw_mast.png"></a></div>
+<div class="grid_6 omega" role="form toolbar" id="subscribe">
+<div class="module">
+<table class="social"><tbody><tr>
+<td class="socialbutton"><a href="http://ocw.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>
+            <td>
+<a href="https://plus.google.com/104567381989352550847/posts"><img alt="Click to visit our Google+ page." src="../../../common/images/icon_gp.png"></a><a href="https://www.pinterest.com/mitocw/pins/"><img alt="Click to visit our Pinterest page." src="../../../common/images/icon_pin.png"></a><a href="http://facebook.com/mitocw"><img alt="Click to visit our Facebook page." src="../../../common/images/icon_fb.png"></a><a href="http://twitter.com/mitocw"><img alt="Click to visit our Twitter feed." src="../../../common/images/icon_tw.png"></a>
+</td>
+        </tr></tbody></table>
+</div>
+<p class="helplinks"><a href="http://ocw.mit.edu/help">Help</a>   |   <a href="../../../common/jsp/feedback.htm">Contact Us</a></p>
+</div>
+<div class="clear"> </div>
+<!--googleon: index-->
+</div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<div id="mega" role="navigation" class="grid_8 alpha">        
+	<ul id="menu">
+<li id="menu_home">
+            <a href="http://ocw.mit.edu/"><img src="../../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+        </li>
+<!-- End Home Item -->        
+        <li class="selected">
+            <a href="#" class="drop">Find Courses</a><!-- Begin 5 columns Item -->
+            <div class="dropdown_5columns-a mega-courses">                    
+                <div class="col_1a">
+                    <div class="row_1a">
+                        <div class="quart">
+                            <h2 class="nav">Find courses by:</h2>
+                            <ul class="nav-bullet find_by">
+<li><a href="http://ocw.mit.edu/courses/find-by-topic/">Topic</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/find-by-number/">MIT Course Number</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/find-by-department/">Department</a></li>
+                            </ul>
+<ul style="margin-top: 88px;" class="nav-bullet find_by">
+<li style="font-weight: normal; font-size: 1em;"><a href="http://ocw.mit.edu/courses/">View All Courses</a></li>
+							</ul>
+</div>
+                        <div class="quart">
+                            <h2 class="nav">Collections</h2>
+                            <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+                                <li><a href="http://ocw.mit.edu/courses/this-course-at-mit/">This Course at MIT</a></li>
+                                <li><a href="http://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+                            </ul>
+</div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="row_1b">
+                        <h2 class="nav">Cross-Disciplinary Topic Lists</h2>
+                        <div class="quart">
+                        <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/energy-courses">Energy</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/environment-courses">Environment</a></li>
+                        </ul>
+</div>    
+                        <div class="quart">
+                        <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/intro-programming">Introductory Programming</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/life-sciences">Life Sciences</a></li>
+                            <li><a href="http://ocw.mit.edu/courses/transportation-courses">Transportation</a></li>
+                        </ul>
+</div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+                <div class="col_1b">
+                    <h2 class="nav">Translated Courses</h2>
+                    <ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/courses/translated-courses/traditional-chinese">繁體字 / Traditional Chinese</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/spanish">Español / Spanish</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/portuguese">Português / Portuguese</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/persian">فارسی / Persian</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/turkish">Türkçe / Turkish</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses/korean">(비디오)한국 / Korean</a></li>
+                        <li><a href="http://ocw.mit.edu/courses/translated-courses">More...</a></li>
+                    </ul>
+</div>
+            </div>
+        </li>
+        <li>
+            <a href="" class="drop">About</a>
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/about/">About MIT OpenCourseWare</a></li>
+                    </ul>
+<ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/about/site-statistics/">Site Stats</a></li>
+                        <li><a href="http://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>                        
+                    </ul>
+<ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/about/media-coverage/">Media Coverage</a></li>
+                        <li><a href="http://ocw.mit.edu/about/newsletter/">Newsletter</a></li>                        
+                    </ul>
+</div>
+            </div>  
+        </li>    
+        <li>
+            <a href="" class="drop">Donate</a>        
+            <div class="dropdown_1column-a">
+                    <div class="col_1">
+                        <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/donate/">Make a Donation</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/why-donate/">Why Donate?</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/our-supporters/">Our Supporters</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+                            <li><a href="http://ocw.mit.edu/donate/shop-ocw">Shop OCW</a></li>
+                        </ul>
+<ul class="nav-bullet">
+<li><a href="http://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+                        </ul>
+</div>
+            </div>            
+        </li>        
+        <li>
+            <a href="" class="drop">Featured Sites</a>        
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+<li><a href="http://ocw.mit.edu/high-school/">Highlights for High School</a></li>
+                        <li><a href="http://ocw.mit.edu/educator/">OCW Educator</a></li>
+                    </ul>
+<ul class="nav-bullet mega-div-top">
+<li><a href="http://ocw.mit.edu/ans7870/featured/mitx-courses-on-edx.htm">MITx Courses on edX</a></li>
+                        <li><a href="http://teachingexcellence.mit.edu/">Teaching Excellence at MIT</a></li>
+						<li><a href="http://www.oeconsortium.org/">Open Education Consortium</a></li>
+                    </ul>
+</div>
+            </div>            
+        </li>
+    </ul>
+</div>
+<div id="search" role="search" class="grid_4 omega">
+    
+    <form method="get" action="../../../common/search/AdvancedSearch.htm">
+     	 <table class="search"><tbody><tr>
+<td class="black"><input type="text" onblur="fillSearchBox()" onfocus="clearSearchBox()" maxlength="255" value="Search" name="q" class="greytext searchField" id="terms"></td> 			 
+                    <td class="black"><input type="image" src="../../../common/images/button_search.png" name="btnG" class="sub_button"></td>			 
+                    <td class="text2"><a href="../../../common/search/AdvancedSearch.htm">Advanced<br>Search</a></td>
+                </tr></tbody></table>
+</form>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->  
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</div>
+<!-- top end -->
+			
+		<div id="center">
+         <div id="grid">
+		     <div id="left-section">
+                 <div id="breadcrumb">
+                      <p>
+
+    <a href="http://ocw.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="http://ocw.mit.edu/courses">Courses</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="http://ocw.mit.edu/courses/mathematics">Mathematics</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/index.htm">Introduction To MATLAB Programming</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/root-finding/index.htm">Root-Finding</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Newton's Method
+         
+    
+</p>
+
+                 </div>
+                 <div class="clear"></div>
+                 <div id="section_title">
+           			<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Newton's Method
+        </span>
+    </h1>
+           	     </div>
+           	     <div class="clear"></div>
+           	     <div id="course_wrapper_section">
+           	     	 <div id="course_nav">
+           			 	
+
+
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script><!--Left Nav Starts --><ul>
+<li class="">
+			   			<a href="../../../contents/index.htm">
+		                  Course Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/Syllabus/index.htm">
+		                  Syllabus  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="the-basics" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuthe-basics'); toggleClass('the-basics'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/the-basics/index.htm" class="">
+		                  The Basics  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuthe-basics" class="">
+<li class="">
+				 		<a href="../../../contents/the-basics/what-is-programming/index.htm" class="">What is Programming?</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/command-prompt-and-expressions/index.htm" class="">Command Prompt and Expressions</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/lists-vectors-and-matrices/index.htm" class="">Lists, Vectors, and Matrices</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/the-basics/variables/index.htm" class="">Variables</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="root-finding" class="mC">
+						<a href="#" class="" onclick="toggleMenu('menuroot-finding'); toggleClass('root-finding'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Collapse Menu" title="Collapse Menu"></a>
+		                <a href="../../../contents/root-finding/index.htm" class="">
+		                  Root-Finding  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuroot-finding" class="selected">
+<li class="">
+				 		<a href="../../../contents/root-finding/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="selected">
+				 		<a href="../../../contents/root-finding/newtons-method/index.htm" class="selected">Newton's Method</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/root-finding/the-secant-method/index.htm" class="">The Secant Method</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/root-finding/more-sub-indexing/index.htm" class="">More Sub-Indexing</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="basic-plotting" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menubasic-plotting'); toggleClass('basic-plotting'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/basic-plotting/index.htm" class="">
+		                  Basic Plotting  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menubasic-plotting" class="">
+<li class="">
+				 		<a href="../../../contents/basic-plotting/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/basic-plotting/basins-of-attraction/index.htm" class="">Basins of Attraction</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="vectorization" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuvectorization'); toggleClass('vectorization'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/vectorization/index.htm" class="">
+		                  Vectorization  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuvectorization" class="">
+<li class="">
+				 		<a href="../../../contents/vectorization/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/complex-numbers/index.htm" class="">Complex Numbers</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/user-defined-functions/index.htm" class="">User-Defined Functions</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/vectorization/scope/index.htm" class="">Scope</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/debugging-with-matlab/index.htm">
+		                  Debugging with MATLAB  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="fractals-and-chaos" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menufractals-and-chaos'); toggleClass('fractals-and-chaos'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/fractals-and-chaos/index.htm" class="">
+		                  Fractals and Chaos  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menufractals-and-chaos" class="">
+<li class="">
+				 		<a href="../../../contents/fractals-and-chaos/logistic-equation/index.htm" class="">Logistic Equation</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/fractals-and-chaos/more-on-loops/index.htm" class="">More on Loops</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/fractals-and-chaos/terminating-a-loop-prematurely-break-and-continue/index.htm" class="">Terminating a Loop Prematurely: Break and Continue</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/fractals-and-chaos/truth-statements-and-logical-indexing/index.htm" class="">Truth Statements and Logical Indexing</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="conway-game-of-life" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuconway-game-of-life'); toggleClass('conway-game-of-life'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/conway-game-of-life/index.htm" class="">
+		                  Conway Game of Life  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuconway-game-of-life" class="">
+<li class="">
+				 		<a href="../../../contents/conway-game-of-life/warm-up/index.htm" class="">Warm-up</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/conway-game-of-life/conway-game-of-life-implementation/index.htm" class="">Conway Game of Life Implementation</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="library" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menulibrary'); toggleClass('library'); return false">
+		                  <img src="../../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../../contents/library/index.htm" class="">
+		                  Library  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menulibrary" class="">
+<li class="">
+				 		<a href="../../../contents/library/projects/index.htm" class="">More Projects</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../../contents/library/videos/index.htm" class="">Videos</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+<!--Left Nav Ends -->
+</div>
+           		     <div id="course_inner_section">
+           		     	 
+	       		     	<p>\(\newcommand{\sech}{\mathop{\rm sech}\nolimits} \newcommand{\csch}{\mathop{\rm csch}\nolimits}\)</p>
+<p>Many mathematical problems involve solving equations. And while linear equations can be solved rather easily, nonlinear ones cannot. A nonlinear equation can always be written as</p>
+<p>\begin{equation} \label{eq:non-linear:function}   f(x)=0 \end{equation}</p>
+<p>For a suitably chosen function \(f\). For example, if we want to find \(x\) so that \(\tanh(x)=x/3\), we could instead chose \(f(x)=\tanh(x)-x/3\) and solve equation (1). Finding solutions to (1) is called "root-finding" (a "root" being a value of \(x\) for which the equation is satisfied).</p>
+<p>We almost have all the tools we need to build a basic and powerful root-finding algorithm, Newton's method*. Newton's method is an <em>iterative</em> method. This means that there is a basic mechanism for taking an approximation to the root, and finding a better one. After enough iterations of this, one is left with an approximation that can be as good as you like (you are also limited by the accuracy of the computation, in the case of MATLAB®, 16 digits).</p>
+<p>Iterative methods entail doing the exact same thing over and over again. This is perfect for a computer.</p>
+<p>The actual iteration starts from an approximation \(x_n\) at the \(n-\)th step and defines the next one,  \(x_{n+1}\) : \begin{equation}   \label{eq:2}   x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)} \end{equation}</p>
+<p>Notice that not only do we need to evaluate the function \(f\) at \(x_n\), but also we need to evaluate the derivative, \(f'(x_n)\). This could be a problem if the derivative is unknown, or complicated to compute (and there are other methods to use in that case).</p>
+<p>For example, we look at a function for which there is no formula for the solution: \(f(x)=\tanh(x) - x/3\) (we are looking for a non-zero solution). Since \(\tanh'(x)=\frac{1}{\cosh^2(x)}=\sech^2(x)\), the update rule becomes: \begin{equation}   \label{eq:3}   x_{n+1}=x_n-\frac{\tanh(x_n)-x_n/3}{\sech^2(x_n)-1/3}. \end{equation}</p>
+<p>We can do this manually by starting somewhere (not zero):</p>
+<pre><code>&gt;&gt; x=2
+x =
+     2</code></pre>
+<p>and doing one step of the iteration by <em>overwriting</em> the old value with the new one:</p>
+<pre><code>&gt;&gt; x=x – (<span style="color: rgb(0, 0, 255);">tanh</span>(x) - x/3) / (<span style="color: rgb(0, 0, 255);">sech</span>(x)^2 – 1/3)
+x =
+     3.1320</code></pre>
+<p>To see what happens when we do this many times, we would need to tell MATLAB to do it many times. We could type in the line many times, but that would be very annoying and time-consuming. Instead, MATLAB keeps a "Command History" which you can both see (turn it on in the "Desktop" menu) and access by pressing the  <span class="keystroke">⇑</span>  and <span class="keystroke">⇓</span> keys on your keyboard.</p>
+<p><strong>Exercise 4.</strong> <em>How many iterations do you need until the solution seems to converge? What did it converge to? Tell MATLAB to show the full accuracy and find the 16-digit number that the iteration converges to.</em></p>
+<p>While using the command history is faster than typing in the same command many times, there is an even better way: tell MATLAB  to do it many times with either a <code class="matlab">for</code> loop or a <code class="matlab">while</code> loop.</p>
+<p>Both types of loops tell MATLAB to perform a set of commands over and over again. The idea of a <code class="matlab">for</code> loop is that you are telling MATLAB to perform a set of command <em>for</em> every element of a list that you supply. For example:</p>
+<pre><span style="color: rgb(0, 0, 255);"><code>for</code></span><code> k=3:10 <span style="color: rgb(51, 153, 102);">% for every element in 3:10</span>
+     k^2   <span style="color: rgb(51, 153, 102);">% calculate _that element_ squared</span> </code>
+<span style="color: rgb(0, 0, 255);"><code>end</code></span></pre>
+<p>will <em>iterate</em> over the values 3 to 10 and perform each of the expressions between the <code class="matlab">for</code> and the <code class="matlab">end</code>. At each iteration, the variable, k in this case (but can be whatever) will be assigned the appropriate value.</p>
+<p><strong>Note 1.</strong> <em>When you type code into</em> MATLAB <em>you might make a mistake and want to start over. Press</em> <span class="keystroke">Ctrl</span> <span class="keystroke">C</span>  <em>to tell MATLAB to erase the current line and start a new one. Once you start writing a </em><code class="matlab">for</code><em> loop you will not get the command prompt (&gt;&gt;) when you press</em> <span class="keystroke">Enter</span> . <em>This is</em> MATLAB<em>'s way of telling you that you are in the middle of writing a command. Once you type </em><code class="matlab">end</code><em> and hit</em> <span class="keystroke">Enter</span> , MATLAB <em>will execute the loop and you'll<br><br>
+get the prompt back. If you started a loop and want to stop in the middle and start over, press </em><span class="keystroke">Ctrl</span> <span class="keystroke">C</span><em> </em><em>to get the prompt.</em></p>
+<p>So we can write</p>
+<pre><span style="color: rgb(51, 153, 102);"><code>% notice how after a % one can write comments which can be used to
+% explain the code inline.
+% it will actually not bother Matlab if you copy the comments
+% together with the code</code></span>
+<code>x=2; <span style="color: rgb(51, 153, 102);">                                  % This is our first guess</span>
+<span style="color: rgb(0, 0, 255);">for</span> k=1:10 <span style="color: rgb(51, 153, 102);">                            % we will iterate 30 times</span>
+     x=x–(<span style="color: rgb(0, 0, 255);">tanh</span>(x)–x/3)/(<span style="color: rgb(0, 0, 255);">sech</span>(x)^2–1/3) <span style="color: rgb(51, 153, 102);">% we do not use k. That is OK.</span>
+<span style="color: rgb(0, 0, 255);">end</span></code></pre>
+<p>To see the functions we are working with, we can do a nice little plot:</p>
+<pre><code>x=<span style="color: rgb(0, 0, 255);">linspace</span>(0,<span style="color: rgb(0, 0, 255);">pi</span>,100); <span style="color: rgb(51, 153, 102);">% a list of 100 points equally spaced between 0</span>
+                      <span style="color: rgb(51, 153, 102);">% and pi</span>
+<span style="color: rgb(0, 0, 255);">plot</span>(x,<span style="color: rgb(0, 0, 255);">tanh</span>(x),x,x/3) </code><span style="color: rgb(51, 153, 102);"><code>% plot two curves: tanh(x) vs. x and x/3 vs. x</code></span></pre>
+<p>You can read more about the functions we used today using the <code class="matlab">help</code> command. For example:</p>
+<pre><code>&gt;&gt; <span style="color: rgb(0, 0, 255);">help tanh</span>
+     TANH Hyperbolic tangent.
+          TANH(X) is the hyperbolic tangent of the elements of X.
+
+          See also <span style="color: rgb(0, 0, 255);">atanh</span>.
+
+          Overloaded methods:
+               codistributed/<span style="color: rgb(0, 0, 255);">tanh</span>
+          Reference page in Help browser
+               doc </code><span style="color: rgb(0, 0, 255);"><code>tanh</code></span></pre>
+<p>Notice that in MATLAB help the commands and variables are always written in CAPITAL LETTERS, this is to make them stand out. In practice, the built-in MATLAB commands are all in lower-case. Your own variables (and functions) may use either, and MATLAB <em>is</em> case-sensitive:</p>
+<pre><code>&gt;&gt; a=1
+a =
+     1
+&gt;&gt; A
+??? Undefined <span style="color: rgb(0, 0, 255);">function</span> or variable <span style="color: rgb(204, 153, 255);">'A'</span>.</code></pre>
+<p><strong>Exercise 5.</strong> <em>Using root-finding calculate</em> \(\sqrt{R}\). <em>Of course,</em> MATLAB <em>has the function </em><code class="matlab">sqrt</code><em> and also the power function as we saw in the previous lecture. But pretend that it did not. What is</em> \(\sqrt{R}\)? <em>Find a simple function</em> \(f\) <em>(that doesn't use the square-root function) so that</em> \(f(\sqrt{2})=0\). <em>(There are several options, so if you don't manage with one option, try another!) Find</em> \(\sqrt{2}\) <em>like a Babylonian†. How many iterations do you need to get an answer that is 1e–15 from the answer given by</em> MATLAB‡<em>? Note: this problem will require you to use a pencil and paper. You will need to differentiate, divide and simplify a fraction </em>before <em> you type your code in</em> MATLAB.</p>
+<p><em>Notice that the starting point is important. Find starting points that converge to each of</em> \(\pm\sqrt{2}\).</p>
+<p><strong>Exercise 6.</strong> <em>As in the previous problem, write an iterative code that will find \(\frac{1}{R}\). You might think that you will have to divide in your code, but that is not true; it depends on the function that you use. Again, if at first you do not succeed, try a different function. Simplify the formula so that it does not need division, and then implement the code to find 1/101. You will need to start close to the answer for the method to converge.</em></p>
+<p class="instruction">*Also referred to as the Newton-Raphson Method.</p>
+<p class="instruction">†See <a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">Methods of computing square roots</a> on Wikipedia for a reference.</p>
+<p class="instruction">‡The notation 1e–15 is legal notation in MATLAB and it means \(1\times10^{-15}\). Also,with MATLAB 1e–16 is the smallest <em>precision</em> (not number) possible i.e., 1+1e–16=1 (although 1+2e–16≠1)</p>
+	                    
+
+
+	        			
+	                    
+	                    
+	                    	
+	                       
+	                    
+            		 </div>
+<!--Course_inner_section tag close -->
+           		     <div class="clear"></div>
+ 				 </div>
+<!--Course_wrapper tag close -->             
+ 			 </div>
+<!--left tag close -->
+ 			                
+         </div>
+<!--grid tag close --> 
+      </div>
+		
+		<div id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer">
+<!--googleoff: index-->
+<div id="bottom">
+<div id="grid">
+<!-- *begin footer* -->
+<div role="navigation sitemap" id="footer">
+<div class="grid_2 alpha" id="foot-c1">
+<h4 class="footer">Find Courses</h4>
+<ul class="foot-bullet">
+<li><a href="http://ocw.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="http://ocw.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="http://ocw.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="http://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="http://ocw.mit.edu/courses/subtitled/">Courses with Subtitles</a></li>
+    <li><a href="http://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="http://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="http://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="http://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="http://ocw.mit.edu/courses/this-course-at-mit/">This Course at MIT</a></li>
+    <li><a href="http://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="http://ocw.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+    <li><a href="http://ocw.mit.edu/courses/">View All Courses</a></li>
+</ul>
+</div>
+<div class="grid_2" id="foot-c2">
+<h4 class="footer">About</h4>
+<ul class="foot-bullet">
+<li><a href="http://ocw.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="http://ocw.mit.edu/about/site-statistics/">Site Stats</a></li>
+    <li><a href="http://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="http://ocw.mit.edu/about/media-coverage/">Media Coverage</a></li>
+    <li><a href="http://ocw.mit.edu/about/newsletter/">Newsletter</a></li>
+    <li><a href="http://ocw.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li>
+</ul>
+</div>
+<div class="grid_2" id="foot-c3">
+<h4 class="footer">Donate</h4>
+<ul class="foot-bullet">
+<li><a href="http://ocw.mit.edu/donate">Make a Donation</a></li>
+    <li><a href="http://ocw.mit.edu/donate/why-donate/">Why Donate?</a></li>
+    <li><a href="http://ocw.mit.edu/donate/our-supporters/">Our Supporters</a></li>
+    <li><a href="http://ocw.mit.edu/donate/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="http://ocw.mit.edu/donate/shop-ocw/">Shop OCW</a></li>
+    <li><a href="http://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</div>
+<div class="grid_2" id="foot-c4">
+<h4 class="footer">Featured Sites</h4>
+<ul class="foot-bullet">
+<li><a href="http://ocw.mit.edu/high-school/">Highlights for High School</a></li>
+    <li><a href="http://ocw.mit.edu/educator/">OCW Educator</a></li>
+    <li><a href="http://ocw.mit.edu/ans7870/featured/mitx-courses-on-edx.htm">MITx Courses on edX</a></li>
+    <li><a href="http://teachingexcellence.mit.edu/">Teaching Excellence at MIT</a></li>
+    <li><a href="http://www.oeconsortium.org/">Open Education Consortium</a></li>
+</ul>
+<h4 style="margin-top: 14px;" class="footer">Tools</h4>
+<ul class="foot-bullet">
+<li><a href="http://ocw.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="../../../common/jsp/feedback.htm">Contact Us</a></li>
+    <li><a href="../../../common/search/AdvancedSearch.htm">Advanced Search</a></li>
+    <li><a href="http://ocw.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="http://ocw.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</div>
+<div class="grid_4 omega" id="foot-c5">
+<h4 class="footer">Our Corporate Supporters</h4>
+<!-- HOME_CORP_LOGO_1 -->
+<div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-0"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+</script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-1"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+</script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-2"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+</script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-3"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+</script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-4"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+</script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-5"><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+</script></div>
+</div>
+<div class="grid_12 alpha omega" style="border-top: thin solid #d5c9ba; padding-top: 24px; margin-bottom: 10px; text-align: center;">
+<p style="font-family: TitilliumText22LRegular,Verdana; text-align: center; font-size: 1.1em;">Support for <span style="letter-spacing: 0.5px;"><strong>MIT OPENCOURSEWARE'S 15th anniversary</strong></span> is provided by <a href="http://www.sapientnitro.com/en-us.html#home"><img src="../../../common/images/logo_sapient.png" style="width: 145px; height: 35px; vertical-align: middle; margin-left: 7px;" alt="SapientNitro logo and nameplate."></a></p>
+</div>
+<div itemtype="http://schema.org/CollegeOrUniversity" itemscope="" itemprop="publisher" class="grid_12 alpha omega">
+<h4 style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;" class="footer">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p itemprop="description" style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,200 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div style="border-top: none;" class="grid_12 alpha omega" id="foot-copy">
+<a href="http://web.mit.edu"><img style="width: 195; height: 44;" alt="Massachusetts Institute of Technology logo and name." src="../../../common/images/logo_mit.png"></a><a href="http://odl.mit.edu"><img style="width: 289; height: 54; vertical-align: top;" alt="MIT Office of Digital Learning logo and name." src="http://ocw.mit.edu/images/logo_odl.png"></a><a href="http://www.oeconsortium.org/"><img style="width: 219px; height: 59px; vertical-align: top;" alt="Open Education Consortium logo." src="http://ocw.mit.edu/images/logo_oec.png"></a><a itemprop="useRightsUrl" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;" alt="Creative Commons logo with terms BY-NC-SA." src="../../../common/images/cc_by-nc-sa.png"></a>
+<p class="copyright">© 2001–2015<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons License</a> and other <a rel="cc:morePermissions" href="../../../common/terms/index.htm">terms of use</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<!--googleon: index-->
+</div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</div>
+<!-- bottom end -->
+		
+		
+   </body>
+</html>

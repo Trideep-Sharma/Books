@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:cwsp="http://www.dspace.org/xmlns/cwspace_imscp"
+          xmlns:ocw="http://ocw.mit.edu/xmlns/ocw_imscp"
+          xmlns:lom="http://ocw.mit.edu/xmlns/LOM"
+          identifier="urn_edu.mit.ocw_18-s997-introduction-to-matlab-programming-fall-2011"
+          version="2016-2-7T2:27:33"
+          cwsp:packageType="Course"
+          xml:base="18-s997-fall-2011/"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 http://www.adlnet.org/xsd/adlcp_rootv1p2.xsd http://www.dspace.org/xmlns/cwspace_imscp http://www.dspace.org/xsd/cwspace_imscp/version10/cwspace_imscpv10.xsd http://ocw.mit.edu/xmlns/ocw_imscp http://ocw.mit.edu/xsd/ocw_imscp/version10/ocw_imscpv10.xsd http://ocw.mit.edu/xmlns/LOM http://ocw.mit.edu/xsd/LOM/lomv1.0/lomv1.0.xsd">
+   	<metadata>
+   		<schema>IMS Content</schema>
+        <schemaversion>1.1</schemaversion>
+        <cwsp:packageMetadata>
+            <cwsp:sourceSystem>OCW</cwsp:sourceSystem>
+            <cwsp:profile>CWSpace</cwsp:profile>
+            <cwsp:profileVersion>0.1</cwsp:profileVersion>
+        </cwsp:packageMetadata>
+        <lom:general uniqueElementName="general">
+            <lom:title uniqueElementName="title">
+				<lom:string language="en">Introduction To MATLAB Programming</lom:string>
+			</lom:title>
+			<lom:identifier>
+				<lom:catalog uniqueElementName="catalog">OCW Master Course Number</lom:catalog>
+		      	<lom:entry uniqueElementName="entry">18.S997</lom:entry>
+			</lom:identifier>
+        </lom:general>
+        <lom:lifecycle uniqueElementName="lifeCycle">
+            <lom:version uniqueElementName="version">
+				<lom:string language="en">Fall 2011</lom:string>
+			</lom:version>
+            <lom:contribute>
+	            <lom:role>
+	                <lom:source uniqueElementName="source">OCW_LOMv1.0</lom:source>
+	                <lom:value uniqueElementName="value">Author</lom:value>
+	            </lom:role>
+	            <lom:entity>Farjoun, Yossi</lom:entity>
+	            <lom:date uniqueElementName="date">
+	                <lom:dateTime uniqueElementName="dateTime">2016-2-7</lom:dateTime>
+	            </lom:date>
+        	</lom:contribute>
+        </lom:lifecycle>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Applied Mathematics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Computer Science</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Programming Languages</lom:string>
+                </lom:entry>
+            </lom:taxon>
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Systems Engineering</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Computational Modeling and Simulation</lom:string>
+                </lom:entry>
+            </lom:taxon>
+        </lom:taxonPath>        
+        <adlcp:location>contents/index.htm.xml</adlcp:location>
+    </metadata>
+    <organizations default="ocw_18-s997-introduction-to-matlab-programming-fall-2011">
+        <organization identifier="ocw_18-s997-introduction-to-matlab-programming-fall-2011">
+            <title>Introduction To MATLAB Programming</title>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.CourseHome"
+                  identifierref="r_contents.index.htm"
+                  ocw:sectionTemplateType="CourseHomePage"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Introduction To MATLAB Programming</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.18-s997f11.jpg"
+          identifierref="r_contents.18-s997f11.jpg">
+				<title>18-s997f11.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.18-s997f11-th.jpg"
+          identifierref="r_contents.18-s997f11-th.jpg">
+				<title>18-s997f11-th.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.Syllabus"
+                  identifierref="r_contents.Syllabus.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Syllabus</title>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics"
+                  identifierref="r_contents.the-basics.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>The Basics</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics.what-is-programming"
+          identifierref="r_contents.the-basics.what-is-programming.index.htm">
+				<title>What is Programming?</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics.command-prompt-and-expressions"
+          identifierref="r_contents.the-basics.command-prompt-and-expressions.index.htm">
+				<title>Command Prompt and Expressions</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics.lists-vectors-and-matrices"
+          identifierref="r_contents.the-basics.lists-vectors-and-matrices.index.htm">
+				<title>Lists, Vectors, and Matrices</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics.variables"
+          identifierref="r_contents.the-basics.variables.index.htm">
+				<title>Variables</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.the-basics.Unit_1_image.jpg"
+          identifierref="r_contents.the-basics.Unit_1_image.jpg">
+				<title>Unit_1_image.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding"
+                  identifierref="r_contents.root-finding.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Root-Finding</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.warm-up"
+          identifierref="r_contents.root-finding.warm-up.index.htm">
+				<title>Warm-up</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.newtons-method"
+          identifierref="r_contents.root-finding.newtons-method.index.htm">
+				<title>Newton's Method</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.the-secant-method"
+          identifierref="r_contents.root-finding.the-secant-method.index.htm">
+				<title>The Secant Method</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.root-finding.the-secant-method.18-S997f11_unit2_img1.jpg"
+          identifierref="r_contents.root-finding.the-secant-method.18-S997f11_unit2_img1.jpg">
+				<title>18-S997f11_unit2_img1.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.more-sub-indexing"
+          identifierref="r_contents.root-finding.more-sub-indexing.index.htm">
+				<title>More Sub-Indexing</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.root-finding.Unit_2_image.JPG"
+          identifierref="r_contents.root-finding.Unit_2_image.JPG">
+				<title>Unit_2_image.JPG</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting"
+                  identifierref="r_contents.basic-plotting.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Basic Plotting</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.Unit_3_image.jpg"
+          identifierref="r_contents.basic-plotting.Unit_3_image.jpg">
+				<title>Unit_3_image.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.warm-up"
+          identifierref="r_contents.basic-plotting.warm-up.index.htm">
+				<title>Warm-up</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.basic-plotting.warm-up.18-S997f11_unit3_img1.jpg"
+          identifierref="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img1.jpg">
+				<title>18-S997f11_unit3_img1.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.basic-plotting.warm-up.18-S997f11_unit3_img2.jpg"
+          identifierref="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img2.jpg">
+				<title>18-S997f11_unit3_img2.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.basic-plotting.warm-up.18-S997f11_unit3_img3.jpg"
+          identifierref="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img3.jpg">
+				<title>18-S997f11_unit3_img3.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.basins-of-attraction"
+          identifierref="r_contents.basic-plotting.basins-of-attraction.index.htm">
+				<title>Basins of Attraction</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.basic-plotting.basic-plotting.basins-of-attraction.18-S997f11_unit3_img4.jpg"
+          identifierref="r_contents.basic-plotting.basins-of-attraction.18-S997f11_unit3_img4.jpg">
+				<title>18-S997f11_unit3_img4.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization"
+                  identifierref="r_contents.vectorization.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Vectorization and User-Defined Functions</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.warm-up"
+          identifierref="r_contents.vectorization.warm-up.index.htm">
+				<title>Warm-up</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.complex-numbers"
+          identifierref="r_contents.vectorization.complex-numbers.index.htm">
+				<title>Complex Numbers</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.user-defined-functions"
+          identifierref="r_contents.vectorization.user-defined-functions.index.htm">
+				<title>User-Defined Functions</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.scope"
+          identifierref="r_contents.vectorization.scope.index.htm">
+				<title>Scope</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.18-S997f11_unit4_img1.jpg"
+          identifierref="r_contents.vectorization.18-S997f11_unit4_img1.jpg">
+				<title>18-S997f11_unit4_img1.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.18-S997f11_unit4_img2.jpg"
+          identifierref="r_contents.vectorization.18-S997f11_unit4_img2.jpg">
+				<title>18-S997f11_unit4_img2.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.vectorization.Unit_4_image.jpg"
+          identifierref="r_contents.vectorization.Unit_4_image.jpg">
+				<title>Unit_4_image.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos"
+                  identifierref="r_contents.fractals-and-chaos.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Fractals and Chaos</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.logistic-equation"
+          identifierref="r_contents.fractals-and-chaos.logistic-equation.index.htm">
+				<title>Logistic Equation</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.fractals-and-chaos.logistic-equation.18-S997f11_unit5_img1.jpg"
+          identifierref="r_contents.fractals-and-chaos.logistic-equation.18-S997f11_unit5_img1.jpg">
+				<title>18-S997f11_unit5_img1.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.more-on-loops"
+          identifierref="r_contents.fractals-and-chaos.more-on-loops.index.htm">
+				<title>More on Loops</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.terminating-a-loop-prematurely-break-and-continue"
+          identifierref="r_contents.fractals-and-chaos.terminating-a-loop-prematurely-break-and-continue.index.htm">
+				<title>Terminating a Loop Prematurely: Break and Continue</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.truth-statements-and-logical-indexing"
+          identifierref="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.index.htm">
+				<title>Truth Statements and Logical Indexing</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img3.jpg"
+          identifierref="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img3.jpg">
+				<title>18-S997f11_unit5_img3.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img2.jpg"
+          identifierref="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img2.jpg">
+				<title>18-S997f11_unit5_img2.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.fractals-and-chaos.Unit_5_image.JPG"
+          identifierref="r_contents.fractals-and-chaos.Unit_5_image.JPG">
+				<title>Unit_5_image.JPG</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.debugging-with-matlab"
+                  identifierref="r_contents.debugging-with-matlab.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Debugging with MATLAB</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.debugging-with-matlab.Unit_6_image.jpg"
+          identifierref="r_contents.debugging-with-matlab.Unit_6_image.jpg">
+				<title>Unit_6_image.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.conway-game-of-life"
+                  identifierref="r_contents.conway-game-of-life.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Conway Game of Life</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.conway-game-of-life.warm-up"
+          identifierref="r_contents.conway-game-of-life.warm-up.index.htm">
+				<title>Warm-up</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.conway-game-of-life.conway-game-of-life-implementation"
+          identifierref="r_contents.conway-game-of-life.conway-game-of-life-implementation.index.htm">
+				<title>Conway Game of Life Implementation</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.conway-game-of-life.Unit_7_image.JPG"
+          identifierref="r_contents.conway-game-of-life.Unit_7_image.JPG">
+				<title>Unit_7_image.JPG</title>
+				</item>
+			</item>
+            <item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library"
+                  identifierref="r_contents.library.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Library</title>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.projects"
+          identifierref="r_contents.library.projects.index.htm">
+				<title>More Projects</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.projects.MIT18_S997F11_Queens.pdf"
+          identifierref="r_contents.library.projects.MIT18_S997F11_Queens.pdf">
+				<title>18.S997 Project Idea: Queens on a Chessboard</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.projects.MIT18_S997F11_Cursive.pdf"
+          identifierref="r_contents.library.projects.MIT18_S997F11_Cursive.pdf">
+				<title>18.S997 Project Idea: Cursive Spline</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.projects.MIT18_S997F11_Autostero.pdf"
+          identifierref="r_contents.library.projects.MIT18_S997F11_Autostero.pdf">
+				<title>18.S997 Project Idea: Autostereograms</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.projects.MIT18_S997F11_Brownian.pdf"
+          identifierref="r_contents.library.projects.MIT18_S997F11_Brownian.pdf">
+				<title>18.S997 Project Idea: Brownian Motion</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.videos"
+          identifierref="r_contents.library.videos.index.htm">
+				<title>Videos</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-1-using-matlab-for-the-first-time"
+          identifierref="r_contents.library.videos.lecture-1-using-matlab-for-the-first-time.index.htm">
+				<title>Lecture 1: Using MATLAB for the First Time</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-1-using-matlab-for-the-first-time.vid1-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-1-using-matlab-for-the-first-time.vid1-thumbnail.jpg">
+				<title>vid1-thumbnail.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-2-the-command-prompt"
+          identifierref="r_contents.library.videos.lecture-2-the-command-prompt.index.htm">
+				<title>Lecture 2: The Command Prompt</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-2-the-command-prompt.vid2-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-2-the-command-prompt.vid2-thumbnail.jpg">
+				<title>vid2-thumbnail.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-6-debugging"
+          identifierref="r_contents.library.videos.lecture-6-debugging.index.htm">
+				<title>Lecture 6: Debugging</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-6-debugging.vid6-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-6-debugging.vid6-thumbnail.jpg">
+				<title>vid6-thumbnail.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-5-scripts-and-functions"
+          identifierref="r_contents.library.videos.lecture-5-scripts-and-functions.index.htm">
+				<title>Lecture 5: Scripts and Functions</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-5-scripts-and-functions.vid5-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-5-scripts-and-functions.vid5-thumbnail.jpg">
+				<title>vid5-thumbnail.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-3-using-files"
+          identifierref="r_contents.library.videos.lecture-3-using-files.index.htm">
+				<title>Lecture 3: Using Files</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-3-using-files.vid3-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-3-using-files.vid3-thumbnail.jpg">
+				<title>vid3-thumbnail.jpg</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.lecture-4-plotting"
+          identifierref="r_contents.library.videos.lecture-4-plotting.index.htm">
+				<title>Lecture 4: Plotting</title>
+				</item>
+				<item identifier="i_18-s997-introduction-to-matlab-programming-fall-2011.library.library.videos.library.videos.lecture-4-plotting.vid4-thumbnail.jpg"
+          identifierref="r_contents.library.videos.lecture-4-plotting.vid4-thumbnail.jpg">
+				<title>vid4-thumbnail.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Legal Notices</title>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Privacy Statement</title>
+			</item>
+            <item identifier="i_terms.trademarks"
+                  identifierref="r_common.terms.trademarks.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2016-2-7">
+				<title>Trademark Notices</title>
+			</item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.index.htm"
+                  type="webcontent"
+                  href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/index.htm">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/truth-statements-and-logical-indexing/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.root-finding.the-secant-method.18-S997f11_unit2_img1.jpg"
+                  type="other"
+                  href="contents/root-finding/the-secant-method/18-S997f11_unit2_img1.jpg">
+            <metadata>
+                <adlcp:location>contents/root-finding/the-secant-method/18-S997f11_unit2_img1.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/the-secant-method/18-S997f11_unit2_img1.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-4-plotting.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-4-plotting/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-4-plotting/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-4-plotting/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.more-on-loops.index.htm"
+                  type="webcontent"
+                  href="contents/fractals-and-chaos/more-on-loops/index.htm">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/more-on-loops/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/more-on-loops/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.projects.MIT18_S997F11_Autostero.pdf"
+                  type="other"
+                  href="contents/library/projects/MIT18_S997F11_Autostero.pdf">
+            <metadata>
+                <adlcp:location>contents/library/projects/MIT18_S997F11_Autostero.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/projects/MIT18_S997F11_Autostero.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.basic-plotting.index.htm"
+                  type="webcontent"
+                  href="contents/basic-plotting/index.htm">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.the-basics.lists-vectors-and-matrices.index.htm"
+                  type="webcontent"
+                  href="contents/the-basics/lists-vectors-and-matrices/index.htm">
+            <metadata>
+                <adlcp:location>contents/the-basics/lists-vectors-and-matrices/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/lists-vectors-and-matrices/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.basic-plotting.basins-of-attraction.18-S997f11_unit3_img4.jpg"
+                  type="other"
+                  href="contents/basic-plotting/basins-of-attraction/18-S997f11_unit3_img4.jpg">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/basins-of-attraction/18-S997f11_unit3_img4.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/basins-of-attraction/18-S997f11_unit3_img4.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.root-finding.more-sub-indexing.index.htm"
+                  type="webcontent"
+                  href="contents/root-finding/more-sub-indexing/index.htm">
+            <metadata>
+                <adlcp:location>contents/root-finding/more-sub-indexing/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/more-sub-indexing/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-6-debugging.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-6-debugging/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-6-debugging/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-6-debugging/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.debugging-with-matlab.index.htm"
+                  type="webcontent"
+                  href="contents/debugging-with-matlab/index.htm">
+            <metadata>
+                <adlcp:location>contents/debugging-with-matlab/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/debugging-with-matlab/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.the-basics.index.htm"
+                  type="webcontent"
+                  href="contents/the-basics/index.htm">
+            <metadata>
+                <adlcp:location>contents/the-basics/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img3.jpg"
+                  type="other"
+                  href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img3.jpg">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img3.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img3.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-3-using-files.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-3-using-files/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-3-using-files/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-3-using-files/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.vectorization.warm-up.index.htm"
+                  type="webcontent"
+                  href="contents/vectorization/warm-up/index.htm">
+            <metadata>
+                <adlcp:location>contents/vectorization/warm-up/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/warm-up/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.root-finding.Unit_2_image.JPG"
+                  type="other"
+                  href="contents/root-finding/Unit_2_image.JPG">
+            <metadata>
+                <adlcp:location>contents/root-finding/Unit_2_image.JPG.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/Unit_2_image.JPG"/>
+                        
+        </resource>
+        <resource identifier="r_contents.root-finding.the-secant-method.index.htm"
+                  type="webcontent"
+                  href="contents/root-finding/the-secant-method/index.htm">
+            <metadata>
+                <adlcp:location>contents/root-finding/the-secant-method/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/the-secant-method/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.the-basics.Unit_1_image.jpg"
+                  type="other"
+                  href="contents/the-basics/Unit_1_image.jpg">
+            <metadata>
+                <adlcp:location>contents/the-basics/Unit_1_image.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/Unit_1_image.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-5-scripts-and-functions.vid5-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-5-scripts-and-functions/vid5-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-5-scripts-and-functions/vid5-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-5-scripts-and-functions/vid5-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.conway-game-of-life.warm-up.index.htm"
+                  type="webcontent"
+                  href="contents/conway-game-of-life/warm-up/index.htm">
+            <metadata>
+                <adlcp:location>contents/conway-game-of-life/warm-up/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/conway-game-of-life/warm-up/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.root-finding.newtons-method.index.htm"
+                  type="webcontent"
+                  href="contents/root-finding/newtons-method/index.htm">
+            <metadata>
+                <adlcp:location>contents/root-finding/newtons-method/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/newtons-method/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.truth-statements-and-logical-indexing.18-S997f11_unit5_img2.jpg"
+                  type="other"
+                  href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img2.jpg">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img2.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/truth-statements-and-logical-indexing/18-S997f11_unit5_img2.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.projects.MIT18_S997F11_Brownian.pdf"
+                  type="other"
+                  href="contents/library/projects/MIT18_S997F11_Brownian.pdf">
+            <metadata>
+                <adlcp:location>contents/library/projects/MIT18_S997F11_Brownian.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/projects/MIT18_S997F11_Brownian.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.the-basics.variables.index.htm"
+                  type="webcontent"
+                  href="contents/the-basics/variables/index.htm">
+            <metadata>
+                <adlcp:location>contents/the-basics/variables/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/variables/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.vectorization.index.htm"
+                  type="webcontent"
+                  href="contents/vectorization/index.htm">
+            <metadata>
+                <adlcp:location>contents/vectorization/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.index.htm"
+                  type="webcontent"
+                  href="contents/index.htm">
+            <metadata>
+                <adlcp:location>contents/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.index.htm"
+                  type="webcontent"
+                  href="contents/library/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-4-plotting.vid4-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-4-plotting/vid4-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-4-plotting/vid4-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-4-plotting/vid4-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.projects.index.htm"
+                  type="webcontent"
+                  href="contents/library/projects/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/projects/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/projects/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-2-the-command-prompt.vid2-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-2-the-command-prompt/vid2-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-2-the-command-prompt/vid2-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-2-the-command-prompt/vid2-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.basic-plotting.warm-up.index.htm"
+                  type="webcontent"
+                  href="contents/basic-plotting/warm-up/index.htm">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/warm-up/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/warm-up/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.18-s997f11.jpg"
+                  type="other"
+                  href="contents/18-s997f11.jpg">
+            <metadata>
+                <adlcp:location>contents/18-s997f11.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/18-s997f11.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img1.jpg"
+                  type="other"
+                  href="contents/basic-plotting/warm-up/18-S997f11_unit3_img1.jpg">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/warm-up/18-S997f11_unit3_img1.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/warm-up/18-S997f11_unit3_img1.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.vectorization.18-S997f11_unit4_img2.jpg"
+                  type="other"
+                  href="contents/vectorization/18-S997f11_unit4_img2.jpg">
+            <metadata>
+                <adlcp:location>contents/vectorization/18-S997f11_unit4_img2.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/18-S997f11_unit4_img2.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.vectorization.user-defined-functions.index.htm"
+                  type="webcontent"
+                  href="contents/vectorization/user-defined-functions/index.htm">
+            <metadata>
+                <adlcp:location>contents/vectorization/user-defined-functions/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/user-defined-functions/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.debugging-with-matlab.Unit_6_image.jpg"
+                  type="other"
+                  href="contents/debugging-with-matlab/Unit_6_image.jpg">
+            <metadata>
+                <adlcp:location>contents/debugging-with-matlab/Unit_6_image.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/debugging-with-matlab/Unit_6_image.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.vectorization.Unit_4_image.jpg"
+                  type="other"
+                  href="contents/vectorization/Unit_4_image.jpg">
+            <metadata>
+                <adlcp:location>contents/vectorization/Unit_4_image.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/Unit_4_image.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-3-using-files.vid3-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-3-using-files/vid3-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-3-using-files/vid3-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-3-using-files/vid3-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img2.jpg"
+                  type="other"
+                  href="contents/basic-plotting/warm-up/18-S997f11_unit3_img2.jpg">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/warm-up/18-S997f11_unit3_img2.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/warm-up/18-S997f11_unit3_img2.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.conway-game-of-life.index.htm"
+                  type="webcontent"
+                  href="contents/conway-game-of-life/index.htm">
+            <metadata>
+                <adlcp:location>contents/conway-game-of-life/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/conway-game-of-life/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.18-s997f11-th.jpg"
+                  type="other"
+                  href="contents/18-s997f11-th.jpg">
+            <metadata>
+                <adlcp:location>contents/18-s997f11-th.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/18-s997f11-th.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.the-basics.what-is-programming.index.htm"
+                  type="webcontent"
+                  href="contents/the-basics/what-is-programming/index.htm">
+            <metadata>
+                <adlcp:location>contents/the-basics/what-is-programming/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/what-is-programming/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.vectorization.scope.index.htm"
+                  type="webcontent"
+                  href="contents/vectorization/scope/index.htm">
+            <metadata>
+                <adlcp:location>contents/vectorization/scope/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/scope/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.basic-plotting.warm-up.18-S997f11_unit3_img3.jpg"
+                  type="other"
+                  href="contents/basic-plotting/warm-up/18-S997f11_unit3_img3.jpg">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/warm-up/18-S997f11_unit3_img3.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/warm-up/18-S997f11_unit3_img3.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.vectorization.18-S997f11_unit4_img1.jpg"
+                  type="other"
+                  href="contents/vectorization/18-S997f11_unit4_img1.jpg">
+            <metadata>
+                <adlcp:location>contents/vectorization/18-S997f11_unit4_img1.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/18-S997f11_unit4_img1.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-6-debugging.vid6-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-6-debugging/vid6-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-6-debugging/vid6-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-6-debugging/vid6-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.terminating-a-loop-prematurely-break-and-continue.index.htm"
+                  type="webcontent"
+                  href="contents/fractals-and-chaos/terminating-a-loop-prematurely-break-and-continue/index.htm">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/terminating-a-loop-prematurely-break-and-continue/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/terminating-a-loop-prematurely-break-and-continue/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.root-finding.index.htm"
+                  type="webcontent"
+                  href="contents/root-finding/index.htm">
+            <metadata>
+                <adlcp:location>contents/root-finding/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.index.htm"
+                  type="webcontent"
+                  href="contents/fractals-and-chaos/index.htm">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.basic-plotting.Unit_3_image.jpg"
+                  type="other"
+                  href="contents/basic-plotting/Unit_3_image.jpg">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/Unit_3_image.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/Unit_3_image.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-1-using-matlab-for-the-first-time.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-1-using-matlab-for-the-first-time/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-1-using-matlab-for-the-first-time/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-1-using-matlab-for-the-first-time/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.vectorization.complex-numbers.index.htm"
+                  type="webcontent"
+                  href="contents/vectorization/complex-numbers/index.htm">
+            <metadata>
+                <adlcp:location>contents/vectorization/complex-numbers/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/vectorization/complex-numbers/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.conway-game-of-life.Unit_7_image.JPG"
+                  type="other"
+                  href="contents/conway-game-of-life/Unit_7_image.JPG">
+            <metadata>
+                <adlcp:location>contents/conway-game-of-life/Unit_7_image.JPG.xml</adlcp:location>
+            </metadata>
+            <file href="contents/conway-game-of-life/Unit_7_image.JPG"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.projects.MIT18_S997F11_Queens.pdf"
+                  type="other"
+                  href="contents/library/projects/MIT18_S997F11_Queens.pdf">
+            <metadata>
+                <adlcp:location>contents/library/projects/MIT18_S997F11_Queens.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/projects/MIT18_S997F11_Queens.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-2-the-command-prompt.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-2-the-command-prompt/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-2-the-command-prompt/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-2-the-command-prompt/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.logistic-equation.index.htm"
+                  type="webcontent"
+                  href="contents/fractals-and-chaos/logistic-equation/index.htm">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/logistic-equation/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/logistic-equation/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.the-basics.command-prompt-and-expressions.index.htm"
+                  type="webcontent"
+                  href="contents/the-basics/command-prompt-and-expressions/index.htm">
+            <metadata>
+                <adlcp:location>contents/the-basics/command-prompt-and-expressions/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/the-basics/command-prompt-and-expressions/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.projects.MIT18_S997F11_Cursive.pdf"
+                  type="other"
+                  href="contents/library/projects/MIT18_S997F11_Cursive.pdf">
+            <metadata>
+                <adlcp:location>contents/library/projects/MIT18_S997F11_Cursive.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/projects/MIT18_S997F11_Cursive.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.logistic-equation.18-S997f11_unit5_img1.jpg"
+                  type="other"
+                  href="contents/fractals-and-chaos/logistic-equation/18-S997f11_unit5_img1.jpg">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/logistic-equation/18-S997f11_unit5_img1.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/logistic-equation/18-S997f11_unit5_img1.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.conway-game-of-life.conway-game-of-life-implementation.index.htm"
+                  type="webcontent"
+                  href="contents/conway-game-of-life/conway-game-of-life-implementation/index.htm">
+            <metadata>
+                <adlcp:location>contents/conway-game-of-life/conway-game-of-life-implementation/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/conway-game-of-life/conway-game-of-life-implementation/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-5-scripts-and-functions.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/lecture-5-scripts-and-functions/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-5-scripts-and-functions/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-5-scripts-and-functions/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.Syllabus.index.htm"
+                  type="webcontent"
+                  href="contents/Syllabus/index.htm">
+            <metadata>
+                <adlcp:location>contents/Syllabus/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/Syllabus/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.fractals-and-chaos.Unit_5_image.JPG"
+                  type="other"
+                  href="contents/fractals-and-chaos/Unit_5_image.JPG">
+            <metadata>
+                <adlcp:location>contents/fractals-and-chaos/Unit_5_image.JPG.xml</adlcp:location>
+            </metadata>
+            <file href="contents/fractals-and-chaos/Unit_5_image.JPG"/>
+                        
+        </resource>
+        <resource identifier="r_contents.root-finding.warm-up.index.htm"
+                  type="webcontent"
+                  href="contents/root-finding/warm-up/index.htm">
+            <metadata>
+                <adlcp:location>contents/root-finding/warm-up/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/root-finding/warm-up/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.library.videos.lecture-1-using-matlab-for-the-first-time.vid1-thumbnail.jpg"
+                  type="other"
+                  href="contents/library/videos/lecture-1-using-matlab-for-the-first-time/vid1-thumbnail.jpg">
+            <metadata>
+                <adlcp:location>contents/library/videos/lecture-1-using-matlab-for-the-first-time/vid1-thumbnail.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/lecture-1-using-matlab-for-the-first-time/vid1-thumbnail.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.library.videos.index.htm"
+                  type="webcontent"
+                  href="contents/library/videos/index.htm">
+            <metadata>
+                <adlcp:location>contents/library/videos/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/library/videos/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_contents.basic-plotting.basins-of-attraction.index.htm"
+                  type="webcontent"
+                  href="contents/basic-plotting/basins-of-attraction/index.htm">
+            <metadata>
+                <adlcp:location>contents/basic-plotting/basins-of-attraction/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/basic-plotting/basins-of-attraction/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>        
+        <resource identifier="r_common.search.AdvancedSearch.htm"
+                  type="webcontent"
+                  href="common/search/AdvancedSearch.htm">
+            <file href="common/search/AdvancedSearch.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_common.jsp.feedback.htm"
+                  type="webcontent"
+                  href="common/jsp/feedback.htm">
+            <file href="common/jsp/feedback.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_common.terms.index.htm"
+                  type="webcontent"
+                  href="common/terms/index.htm">
+            <file href="common/terms/by.png"/>
+            <file href="common/terms/nc.png"/>
+            <file href="common/terms/sa.png"/>
+            <file href="common/terms/deedheadyellow.png"/>
+            <file href="common/terms/freedomsheader.png"/>
+            <file href="common/terms/limitationsheader.png"/>
+            <file href="common/terms/understandingheader.jpg"/>
+            <file href="common/terms/deedfootyellow.png"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="r_common.terms.trademarks.index.htm"
+                  type="webcontent"
+                  href="common/terms/trademarks/index.htm">
+            <file href="common/terms/trademarks/index.htm"/>
+            <dependency identifierref="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"/>            
+        </resource>
+        <resource identifier="webrenderrequirements.18-s997-introduction-to-matlab-programming-fall-2011"
+                  type="webcontent">
+        	<file href="common/styles/base.css"/>
+        	<file href="common/styles/courses.css"/>
+        	<file href="common/styles/courses_new.css"/>
+        	<file href="common/styles/educator.css"/>
+        	<file href="common/styles/global.css"/>
+        	<file href="common/styles/grid.css"/>
+        	<file href="common/styles/highslide.css"/>
+        	<file href="common/styles/highslide-ie6.css"/>
+        	<file href="common/styles/jquery.bubblepopup.css"/>
+        	<file href="common/styles/jquery.jscrollpane.css"/>
+        	<file href="common/styles/jquery-ui.css"/>
+        	<file href="common/styles/menu.css"/>
+        	<file href="common/styles/scholar2.css"/>
+        	<file href="common/styles/media_tabs.css"/>
+        	<file href="common/scripts/bubble-popup-offline.js"/>
+        	<file href="common/scripts/jquery.js"/>
+        	<file href="common/scripts/ocw-media-utils.js"/>
+        	<file href="common/scripts/ocw-media-utils-offline.js"/>
+        	<file href="common/scripts/highslide-with-gallery.js"/>
+        	<file href="common/scripts/jquery.bubblepopup.min.js"/>
+        	<file href="common/scripts/jquery.jscrollpane.min.js"/>
+        	<file href="common/scripts/jquery-ui.min.js"/>
+        	<file href="common/scripts/jQuizMe-uncompressed.js"/>
+        	<file href="common/scripts/ocw-offline.js"/>
+        	<file href="common/scripts/expandy.js"/>
+        	<file href="common/scripts/chart.js"/>
+        	<file href="common/scripts/jquery.anythingslider.js"/>
+        	<file href="common/images/ocw_mast.png"/>
+        	<file href="common/images/button_subscribe.png"/>
+        	<file href="common/images/icon_fb.png"/>
+        	<file href="common/images/icon_gp.png"/>
+        	<file href="common/images/icon_pin.png"/>
+        	<file href="common/images/icon_tw.png"/>
+        	<file href="common/images/icon-question-ovt.png"/>
+        	<file href="common/images/icon-question-svt.png"/>
+        	<file href="common/images/icon-question-avt.png"/>
+        	<file href="common/images/top-nav_home.png"/>
+        	<file href="common/images/button_search.png"/>
+        	<file href="common/images/bg_top.png"/>
+        	<file href="common/images/bg_social.png"/>
+        	<file href="common/images/bg_social2.png"/>
+        	<file href="common/images/bg_mega-courses.png"/>
+        	<file href="common/images/bg_center2.png"/>
+        	<file href="common/images/bg_course-nav_current.png"/>
+        	<file href="common/images/button_donate-now.png"/>
+        	<file href="common/images/logo_mit.png"/>
+        	<file href="common/images/logo_ocwc.gif"/>
+        	<file href="common/images/cc_by-nc-sa.png"/>
+        	<file href="common/images/logo_dow.png"/>
+        	<file href="common/images/logo_lockheed.png"/>
+        	<file href="common/images/logo_mathworks.png"/>
+        	<file href="common/images/logo_abinitio.png"/>
+        	<file href="common/images/logo_sapient.png"/>
+        	<file href="common/images/bg_bottom.png"/>
+        	<file href="common/images/nav_arrow.png"/>
+        	<file href="common/images/news-subscibe_bg.png"/>
+        	<file href="common/images/black-arrow.gif"/>
+        	<file href="common/images/trans.gif"/>
+        	<file href="common/images/arrow-bullet.gif"/>
+        	<file href="common/images/apple-touch-icon.png"/>
+        	<file href="common/images/highslide/graphics/zoomin.cur"/>
+        	<file href="common/images/highslide/graphics/zoomout.cur"/>
+        	<file href="common/images/highslide/graphics/controlbar2.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar3.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4-hover.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-black-border.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white-small.gif"/>
+        	<file href="common/images/highslide/graphics/fullexpand.gif"/>
+        	<file href="common/images/highslide/graphics/icon.gif"/>
+        	<file href="common/images/highslide/graphics/loader.gif"/>
+        	<file href="common/images/highslide/graphics/loader.white.gif"/>
+        	<file href="common/images/highslide/graphics/resize.gif"/>
+        	<file href="common/images/highslide/graphics/close.png"/>
+        	<file href="common/images/highslide/graphics/closeX.png"/>
+        	<file href="common/images/highslide/graphics/controlbar-text-buttons.png"/>
+        	<file href="common/images/highslide/graphics/geckodimmer.png"/>
+        	<file href="common/images/highslide/graphics/scrollarrows.png"/>
+        	<file href="common/images/highslide/graphics/outlines/beveled.png"/>
+        	<file href="common/images/highslide/graphics/outlines/drop-shadow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/glossy-dark.png"/>
+        	<file href="common/images/highslide/graphics/outlines/outer-glow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-black.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-white.png"/>
+        	<file href="common/images/highslide/graphics/outlines/Outlines.psd"/>
+        	<file href="common/images/button_continue.jpg"/>
+        	<file href="common/images/button_donate.jpg"/>
+        	<file href="common/images/button_start.jpg"/>
+        	<file href="common/images/scholar_bar_chp.png"/>
+        	<file href="common/images/scholar_bar.png"/>
+        	<file href="common/images/logo_pdf.jpg"/>
+        	<file href="common/images/h2_trigger_open_close.gif"/>
+        	<file href="common/images/bookmark.gif"/>
+        	<file href="common/images/check.png"/>
+        	<file href="common/images/lightbulb.png"/>
+        	<file href="common/images/audio_file.gif"/>
+        	<file href="common/images/audio_only_slate.gif"/>
+        	<file href="common/images/video_file.gif"/>
+        	<file href="common/images/back-5.png"/>
+        	<file href="common/images/btn_next_resource.png"/>
+        	<file href="common/images/btn_previous_resource.png"/>
+        	<file href="common/images/close.png"/>
+        	<file href="common/images/inacessible.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-bottom.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-top.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-bottom.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-top.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-right.png"/>
+        	<file href="common/images/educator/classroom_next.png"/>
+        	<file href="common/images/educator/classroom_next_dim.png"/>
+        	<file href="common/images/educator/classroom_prev.png"/>
+        	<file href="common/images/educator/classroom_prev_dim.png"/>
+        	<file href="common/images/educator/edu_b-blank.png"/>
+        	<file href="common/images/educator/edu_b-blank-key.png"/>
+        	<file href="common/images/educator/edu_b-duedate.png"/>
+        	<file href="common/images/educator/edu_b-duedate-key.png"/>
+        	<file href="common/images/educator/edu_b-exam.png"/>
+        	<file href="common/images/educator/edu_b-exam-key.png"/>
+        	<file href="common/images/educator/edu_b-lab.png"/>
+        	<file href="common/images/educator/edu_b-lab-key.png"/>
+        	<file href="common/images/educator/edu_b-lab-team.png"/>
+        	<file href="common/images/educator/edu_b-lab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-leclab.png"/>
+        	<file href="common/images/educator/edu_b-leclab-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture.png"/>
+        	<file href="common/images/educator/edu_b-lecture-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecture-exam.png"/>
+        	<file href="common/images/educator/edu_b-lecture-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lecture-preslab.png"/>
+        	<file href="common/images/educator/edu_b-lecture-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lecture-team.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-key.png"/>
+        	<file href="common/images/educator/edu_b-leclab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecrec.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lunch-key.png"/>
+        	<file href="common/images/educator/edu_b-noclass.png"/>
+        	<file href="common/images/educator/edu_b-noclass-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-exam.png"/>
+        	<file href="common/images/educator/edu_b-noclass-key.png"/>
+        	<file href="common/images/educator/edu_b-office.png"/>
+        	<file href="common/images/educator/edu_b-office-key.png"/>
+        	<file href="common/images/educator/edu_b-present.png"/>
+        	<file href="common/images/educator/edu_b-present-duedate.png"/>
+        	<file href="common/images/educator/edu_b-present-key.png"/>
+        	<file href="common/images/educator/edu_b-preslab.png"/>
+        	<file href="common/images/educator/edu_b-preslab-key.png"/>
+        	<file href="common/images/educator/edu_b-quiz-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-reclab.png"/>
+        	<file href="common/images/educator/edu_b-noclass-concert.png"/>
+        	<file href="common/images/educator/edu_b-leclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-concert-key.png"/>
+        	<file href="common/images/educator/edu_b-concert.png"/>
+        	<file href="common/images/educator/edu_b-recitation.png"/>
+        	<file href="common/images/educator/edu_b-recitation-duedate.png"/>
+        	<file href="common/images/educator/edu_b-recitation-exam.png"/>
+        	<file href="common/images/educator/edu_b-recitation-key.png"/>
+        	<file href="common/images/educator/edu_b-team.png"/>
+        	<file href="common/images/educator/edu_b-team-key.png"/>
+        	<file href="common/images/educator/edu_b-team-preslab.png"/>
+        	<file href="common/images/educator/edu_b-work.png"/>
+        	<file href="common/images/educator/edu_b-work-key.png"/>
+        	<file href="common/images/educator/icon-question-cih.png"/>
+        	<file href="common/images/educator/icon-question-cihw.png"/>
+        	<file href="common/images/educator/icon-question-cim.png"/>
+        	<file href="common/images/educator/icon-question-collab.png"/>
+        	<file href="common/images/educator/icon-question-coop.png"/>
+        	<file href="common/images/educator/icon-question-fas.png"/>
+        	<file href="common/images/educator/icon-question-gir.png"/>
+        	<file href="common/images/educator/icon-question-hass.png"/>
+        	<file href="common/images/educator/icon-question-hass-s.png"/>
+        	<file href="common/images/educator/icon-question-iap.png"/>
+        	<file href="common/images/educator/icon-question-lab.png"/>
+        	<file href="common/images/educator/icon-question-urop.png"/>
+        	<file href="common/images/educator/icon-question-active.png"/>
+        	<file href="common/images/educator/icon-question-clickq.png"/>
+        	<file href="common/images/educator/icon-question-conq.png"/>
+        	<file href="common/images/educator/icon-question-flip.png"/>
+        	<file href="common/images/educator/icon-question-form.png"/>
+        	<file href="common/images/educator/icon-question-immed.png"/>
+        	<file href="common/images/educator/icon-question-learn.png"/>
+        	<file href="common/images/educator/icon-question-ped.png"/>
+        	<file href="common/images/educator/icon-question-readq.png"/>
+        	<file href="common/images/educator/icon-question-service.png"/>
+        	<file href="common/images/educator/icon-question-sum.png"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.eot"/>
+        </resource>        
+  </resources>
+</manifest>
